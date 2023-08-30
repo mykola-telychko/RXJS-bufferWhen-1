@@ -6,8 +6,8 @@ import { bufferWhen } from 'rxjs/operators';
 
 //emit value every 1 second
 const oneSecondInterval = interval(1000);
-//return an observable that emits value every 5 seconds
-const fiveSecondInterval = () => interval(5000);
+//return an observable that emits value every 3 seconds
+const fiveSecondInterval = () => interval(3000);
 //every five seconds, emit buffered values
 const bufferWhenExample = oneSecondInterval.pipe(
   bufferWhen(fiveSecondInterval)
